@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import React from "react";
 import { Avatar } from "@/components/avatar";
@@ -13,7 +13,8 @@ const formatLink = (str: string) =>
       .replace("mailto:", "")
       .replace("https://www.", "")
       .replace("https://", "")
-      .replace("http://www.", "");
+      .replace("http://www.", "")
+      .replace("tel:", "");
 
 // Type-safe icon mapping
 const ICON_MAP: Record<
@@ -43,7 +44,7 @@ function LocationLink({ location, locationLink }: LocationLinkProps) {
             rel="noopener noreferrer"
             aria-label={`Location: ${location}`}
          >
-            <GlobeIcon className="size-3" aria-hidden="true" />
+            <MapPinIcon className="size-3" aria-hidden="true" />
             {location}
          </a>
       </p>

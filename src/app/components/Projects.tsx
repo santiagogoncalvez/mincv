@@ -129,7 +129,7 @@ interface ProjectsProps {
  */
 export function Projects({ projects }: ProjectsProps) {
    return (
-      <Section className="scroll-mb-16 print:space-y-4">
+      <Section>
          <h2 className="text-xl font-semibold" id="side-projects">
             Proyectos
             {/* Projects */}

@@ -2,32 +2,52 @@ import type { ResumeData } from "@/lib/types";
 
 export const RESUME_DATA: ResumeData = {
    name: "Santiago Goncalvez",
+
    initials: "SG",
+
    location: "Buenos Aires, Argentina",
+
    locationLink: "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
-   about: "Desarrollador Frontend (React & TypeScript). Estudiante de Ingeniería Informática. Enfocado en construir interfaces rápidas, mantenibles y bien pensadas, con especial atención al rendimiento y la experiencia de usuario.",
+
+   about: "Desarrollador Frontend especializado en JavaScript, React y TypeScript. Desarrollo interfaces modernas, rápidas y mantenibles, priorizando rendimiento y experiencia de usuario.",
+
    summary: (
       <>
-         <strong>Desarrollador Frontend</strong> con foco en{" "}
-         <strong>React</strong> y <strong>TypeScript</strong>. Me especializo en
-         construir interfaces eficientes y escalables, cuidando la arquitectura
-         de código y la experiencia de usuario. He desarrollado aplicaciones con
-         routing avanzado, scroll infinito, persistencia de datos y manejo de
-         estado global. Busco mi primera oportunidad profesional en equipos de
-         producto donde aportar soluciones claras y de impacto real.
+         <strong>Desarrollador Frontend</strong> con experiencia construyendo
+         aplicaciones y plataformas web modernas utilizando{" "}
+         <strong>JavaScript</strong>, <strong>React</strong> y{" "}
+         <strong>TypeScript</strong>.
+         <br />
+         Trabajo desarrollando interfaces responsive y mantenibles, integrando
+         APIs REST y priorizando buenas prácticas, arquitectura frontend y
+         optimización de rendimiento.
+         <br />
+         He desarrollado e-commerce, landing pages premium y plataformas
+         autogestionables utilizando React, Astro y Tailwind CSS, colaborando
+         directamente con clientes desde la planificación hasta la
+         implementación final.
+         <br />
+         Actualmente curso Ingeniería Informática y busco seguir creciendo
+         profesionalmente en equipos de desarrollo web.
       </>
    ),
+
    avatarUrl: "https://github.com/santiagogoncalvez.png",
+
    personalWebsiteUrl: "https://santiagogoncalvez.com",
+
    contact: {
       email: "santiago.goncalvez.dev@gmail.com",
+
       tel: "+54 9 11 3582-1266",
+
       social: [
          {
             name: "LinkedIn",
             url: "https://www.linkedin.com/in/santiagogoncalvez",
             icon: "linkedin",
          },
+
          {
             name: "GitHub",
             url: "https://github.com/santiagogoncalvez",
@@ -35,98 +55,112 @@ export const RESUME_DATA: ResumeData = {
          },
       ],
    },
+
    education: [
       {
          school: "Ingeniería Informática (en curso)",
+
          degree:
-            "Universidad Nacional de La Matanza. Enfoque en lógica algorítmica y resolución de problemas.",
+            "Universidad Nacional de La Matanza. Enfoque en arquitectura de software, lógica algorítmica y resolución de problemas.",
+
          start: "2023",
+
          end: "Presente",
       },
    ],
+
    work: [
-      // Sin experiencia laboral formal aún.
+      {
+         company: "Freelance",
+
+         link: "https://santiagogoncalvez.com",
+
+         badges: ["Remoto"],
+
+         title: "Frontend Developer",
+
+         start: "feb. 2026",
+
+         end: "Presente",
+
+         description: (
+            <>
+               Desarrollo de plataformas web y experiencias digitales utilizando
+               React, TypeScript, JavaScript y Astro. Implementación de
+               interfaces responsive, integración de APIs REST y optimización de
+               rendimiento enfocada en experiencia de usuario y mantenibilidad
+               del código.
+            </>
+         ),
+      },
    ],
+
    skills: [
-      "React",
-      "TypeScript",
       "JavaScript",
-      "HTML & CSS",
+      "TypeScript",
+      "React",
+      "HTML",
+      "CSS",
       "Tailwind CSS",
-      // "React Query (TanStack Query)",
-      // "Redux Toolkit",
-      // "Zustand",
-      // "Gestión de estado",
-      // "React Router",
       "Astro",
-      "Vitest",
-      // "Testing unitario e integración",
-      // "Optimización de rendimiento",
-      // "Experiencia de usuario (UX)",
+      "APIs REST",
+      "Git",
       "Diseño responsive",
-      // "Browser APIs / DOM",
-      // "Git",
+      "Arquitectura frontend",
+      "UX/UI",
+      "Optimización de rendimiento",
+      "Metodologías ágiles",
    ],
+
    projects: [
-      // {
-      //    title: "Tech Test: Data Management Dashboard",
-      //    techStack: ["React", "TypeScript", "React Query", "Vite"],
-      //    description:
-      //       "Dashboard de usuarios con filtrado avanzado, ordenamiento multicapa y recuperación de datos. Enfocado en optimización de rendimiento y manejo de estado asíncrono.",
-      //    link: {
-      //       label: "Vista previa",
-      //       href: "https://userops-dashboard.web.app",
-      //    },
-      // },
       {
-         title: "Hacker Stories",
+         title: "Nidotrama E-commerce",
+
          techStack: [
+            "Astro",
             "React",
             "TypeScript",
-            "React Query",
-            "React Router",
-            "Vitest",
-            "Vite",
-         ],
-         description:
-            "Cliente avanzado de Hacker News con scroll infinito, persistencia de favoritos, gestión de historial de búsqueda y navegación optimizada. Incluye tests unitarios y de integración con Vitest.",
-         link: {
-            label: "Vista previa",
-            href: "https://hackerstories-dev.web.app",
-         },
-      },
-      {
-         title: "Admin User Management System",
-         techStack: [
-            "React",
-            "TypeScript",
-            "Redux Toolkit",
-            "Tremor",
+            "Sanity CMS",
             "Tailwind CSS",
-            "Vite",
          ],
+
          description:
-            "CRUD profesional con estado global predecible, tipado estricto y un sistema de actualización optimista con rollback para garantizar la integridad de los datos.",
+            "E-commerce moderno para una marca textil artesanal con catálogo autogestionable, páginas de producto y carrito compartible, optimizado para rendimiento y experiencia de usuario.",
+
          link: {
             label: "Vista previa",
-            href: "https://core-crud-interface.web.app",
+
+            href: "https://nidotrama.com",
          },
       },
+
       {
-         title: "Tu País",
-         techStack: [
-            "Vanilla JavaScript",
-            "HTML",
-            "CSS",
-            "Arquitectura Flux",
-            "Hash routing",
-            "Vite",
-         ],
+         title: "Jorgelina Reales - La Flor Sagrada",
+
+         techStack: ["Astro", "React", "TypeScript", "SEO", "Tailwind CSS"],
+
          description:
-            "Juego interactivo de adivinanzas de banderas con arquitectura inspirada en Flux, estado global y routing por hash.",
+            "Plataforma digital desarrollada con foco en velocidad, posicionamiento orgánico y optimización técnica, alcanzando métricas 100/100 en Google Lighthouse.",
+
          link: {
             label: "Vista previa",
-            href: "https://santiagogoncalvez.github.io/tupais/",
+
+            href: "https://jorgelinareales.com.ar",
+         },
+      },
+
+      {
+         title: "Any Giraldez - Estilista de Autor",
+
+         techStack: ["Astro", "React", "TypeScript", "Tailwind CSS", "SEO"],
+
+         description:
+            "Landing page premium enfocada en transmitir una identidad visual sofisticada mediante una experiencia responsive optimizada para dispositivos móviles y escritorio.",
+
+         link: {
+            label: "Vista previa",
+
+            href: "https://anygiraldez.com",
          },
       },
    ],
