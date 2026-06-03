@@ -63,7 +63,7 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
    return (
       <Button
          className="h-8 w-fit p-2 flex gap-2"
-         variant="outline"
+         variant="secondary"
          asChild={true}
       >
          <a

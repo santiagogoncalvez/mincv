@@ -9,26 +9,29 @@ export const RESUME_DATA: ResumeData = {
 
    locationLink: "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
 
-   about: "Desarrollador Frontend especializado en JavaScript, React y TypeScript. Desarrollo interfaces modernas, rápidas y mantenibles, priorizando rendimiento y experiencia de usuario.",
+   about: "Desarrollador Frontend especializado en React, JavaScript y TypeScript. Desarrollo interfaces modernas, rápidas y mantenibles, enfocadas en experiencia de usuario, rendimiento y escalabilidad.",
 
    summary: (
       <>
-         <strong>Desarrollador Frontend</strong> con experiencia construyendo
+         <strong>Desarrollador Frontend</strong> con experiencia desarrollando
          aplicaciones y plataformas web modernas utilizando{" "}
-         <strong>JavaScript</strong>, <strong>React</strong> y{" "}
+         <strong>React</strong>, <strong>JavaScript</strong> y{" "}
          <strong>TypeScript</strong>.
          <br />
-         Trabajo desarrollando interfaces responsive y mantenibles, integrando
-         APIs REST y priorizando buenas prácticas, arquitectura frontend y
-         optimización de rendimiento.
+         Trabajo construyendo interfaces responsive, componentes reutilizables,
+         integración de APIs REST y experiencias enfocadas en rendimiento,
+         mantenibilidad y buenas prácticas frontend.
          <br />
-         He desarrollado e-commerce, landing pages premium y plataformas
-         autogestionables utilizando React, Astro y Tailwind CSS, colaborando
+         He desarrollado e-commerce, landing pages premium y plataformas web
+         modernas utilizando React, Astro y Tailwind CSS, colaborando
          directamente con clientes desde la planificación hasta la
          implementación final.
          <br />
-         Actualmente curso Ingeniería Informática y busco seguir creciendo
-         profesionalmente en equipos de desarrollo web.
+         También tengo experiencia trabajando con manejo de estado, consumo de
+         APIs, dashboards y flujos frontend enfocados en mobile-first.
+         <br />
+         Actualmente continúo profundizando mis conocimientos en Next.js,
+         arquitectura frontend y desarrollo de aplicaciones escalables.
       </>
    ),
 
@@ -61,7 +64,7 @@ export const RESUME_DATA: ResumeData = {
          school: "Ingeniería Informática (en curso)",
 
          degree:
-            "Universidad Nacional de La Matanza. Enfoque en arquitectura de software, lógica algorítmica y resolución de problemas.",
+            "Universidad Nacional de La Matanza. Formación enfocada en lógica, arquitectura de software y resolución de problemas.",
 
          start: "2023",
 
@@ -85,31 +88,33 @@ export const RESUME_DATA: ResumeData = {
 
          description: (
             <>
-               Desarrollo de plataformas web y experiencias digitales utilizando
-               React, TypeScript, JavaScript y Astro. Implementación de
-               interfaces responsive, integración de APIs REST y optimización de
-               rendimiento enfocada en experiencia de usuario y mantenibilidad
-               del código.
+               Desarrollo de plataformas web utilizando React, TypeScript,
+               JavaScript y Astro. Implementación de interfaces responsive,
+               integración de APIs REST, optimización de rendimiento y
+               construcción de experiencias frontend modernas enfocadas en
+               mantenibilidad y escalabilidad.
             </>
          ),
       },
    ],
 
    skills: [
+      "React",
       "JavaScript",
       "TypeScript",
-      "React",
-      "HTML",
-      "CSS",
+      "HTML5",
+      "CSS3",
       "Tailwind CSS",
       "Astro",
-      "APIs REST",
       "Git",
-      "Diseño responsive",
-      "Arquitectura frontend",
-      "UX/UI",
-      "Optimización de rendimiento",
-      "Metodologías ágiles",
+      "APIs REST",
+      "Responsive Design",
+      "Frontend Architecture",
+      "State Management",
+      "UI Components",
+      "Performance Optimization",
+      "SCRUM",
+      "Trabajo en equipo",
    ],
 
    projects: [
@@ -117,15 +122,15 @@ export const RESUME_DATA: ResumeData = {
          title: "Nidotrama E-commerce",
 
          techStack: [
-            "Astro",
             "React",
             "TypeScript",
+            "Astro",
             "Sanity CMS",
             "Tailwind CSS",
          ],
 
          description:
-            "E-commerce moderno para una marca textil artesanal con catálogo autogestionable, páginas de producto y carrito compartible, optimizado para rendimiento y experiencia de usuario.",
+            "E-commerce moderno con catálogo autogestionable, páginas de producto y experiencia responsive optimizada para rendimiento y experiencia de usuario.",
 
          link: {
             label: "Vista previa",
@@ -137,10 +142,10 @@ export const RESUME_DATA: ResumeData = {
       {
          title: "Jorgelina Reales - La Flor Sagrada",
 
-         techStack: ["Astro", "React", "TypeScript", "SEO", "Tailwind CSS"],
+         techStack: ["React", "TypeScript", "Astro", "SEO", "Tailwind CSS"],
 
          description:
-            "Plataforma digital desarrollada con foco en velocidad, posicionamiento orgánico y optimización técnica, alcanzando métricas 100/100 en Google Lighthouse.",
+            "Plataforma web optimizada para velocidad y posicionamiento orgánico, alcanzando métricas 100/100 en Google Lighthouse.",
 
          link: {
             label: "Vista previa",
@@ -152,10 +157,10 @@ export const RESUME_DATA: ResumeData = {
       {
          title: "Any Giraldez - Estilista de Autor",
 
-         techStack: ["Astro", "React", "TypeScript", "Tailwind CSS", "SEO"],
+         techStack: ["React", "TypeScript", "Astro", "Tailwind CSS", "SEO"],
 
          description:
-            "Landing page premium enfocada en transmitir una identidad visual sofisticada mediante una experiencia responsive optimizada para dispositivos móviles y escritorio.",
+            "Landing page premium con foco en identidad visual, experiencia responsive y rendimiento en dispositivos móviles y escritorio.",
 
          link: {
             label: "Vista previa",
