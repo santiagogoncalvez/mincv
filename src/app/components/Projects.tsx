@@ -98,7 +98,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
          rel="noopener noreferrer"
          aria-label={`${title} project (opens in new tab)`}
       >
-         <Card className="flex h-full flex-col overflow-hidden border p-3">
+         <Card className="flex h-full flex-col overflow-hidden border  p-3">
             <CardHeader>
                <div className="space-y-1">
                   <CardTitle className="text-base">

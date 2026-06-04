@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
 import { RESUME_DATA } from "@/data/resume-data";
-import type { ResumeIcon, IconType } from "@/lib/types";
+import type { ResumeIcon, IconType, LinkGeneralWithIcon } from "@/lib/types";
 
 const formatLink = (str: string) =>
    str
@@ -53,18 +53,19 @@ function LocationLink({ location, locationLink }: LocationLinkProps) {
 
 interface SocialButtonProps {
    href: string;
-   iconType: IconType;
+   iconType: IconType | undefined;
    label: string;
 }
 
 function SocialButton({ href, iconType, label }: SocialButtonProps) {
-   const IconComponent = ICON_MAP[iconType];
+   const IconComponent = iconType ? ICON_MAP[iconType] : null;
 
    return (
       <Button
-         className="h-8 w-fit p-2 flex gap-2"
-         variant="secondary"
+         className=" w-fit flex gap-2"
+         variant="link"
          asChild={true}
+         size={"link"}
       >
          <a
             href={href}
@@ -72,8 +73,10 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
             target="_blank"
             rel="noopener noreferrer"
          >
-            <IconComponent className="size-4" aria-hidden="true" />
-            {formatLink(href)}
+            {IconComponent && (
+               <IconComponent className="size-4" aria-hidden="true" />
+            )}
+            {label}
          </a>
       </Button>
    );
@@ -81,21 +84,21 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
 
 interface ContactButtonsProps {
    contact: typeof RESUME_DATA.contact;
-   personalWebsiteUrl?: string;
+   personalWebsiteUrl?: LinkGeneralWithIcon;
 }
 
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
    return (
       <ul
-         className="flex flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+         className="flex flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm text-foreground/80 print:hidden"
          aria-label="Contact links"
       >
          {personalWebsiteUrl && (
             <li>
                <SocialButton
-                  href={personalWebsiteUrl}
+                  href={personalWebsiteUrl.url}
                   iconType="globe"
-                  label="Personal website"
+                  label={personalWebsiteUrl.label}
                />
             </li>
          )}
@@ -104,7 +107,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
                <SocialButton
                   href={`mailto:${contact.email}`}
                   iconType="mail"
-                  label="Email"
+                  label={contact.email}
                />
             </li>
          )}
@@ -113,7 +116,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
                <SocialButton
                   href={`tel:${contact.tel}`}
                   iconType="phone"
-                  label="Phone"
+                  label={contact.tel}
                />
             </li>
          )}
@@ -122,7 +125,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
                <SocialButton
                   href={social.url}
                   iconType={social.icon}
-                  label={social.name}
+                  label={social.label}
                />
             </li>
          ))}
@@ -132,7 +135,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 
 interface PrintContactProps {
    contact: typeof RESUME_DATA.contact;
-   personalWebsiteUrl?: string;
+   personalWebsiteUrl?: LinkGeneralWithIcon;
 }
 
 /*
@@ -197,15 +200,15 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
    return (
       <ul
          className="hidden
-print:flex print:text-[12px] flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono text-sm text-foreground/80"
+print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm text-foreground/80"
          aria-label="Contact links"
       >
          {personalWebsiteUrl && (
             <li>
                <SocialButton
-                  href={personalWebsiteUrl}
+                  href={personalWebsiteUrl.url}
                   iconType="globe"
-                  label="Personal website"
+                  label={personalWebsiteUrl.label}
                />
             </li>
          )}
@@ -214,7 +217,7 @@ print:flex print:text-[12px] flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono te
                <SocialButton
                   href={`mailto:${contact.email}`}
                   iconType="mail"
-                  label="Email"
+                  label={contact.email}
                />
             </li>
          )}
@@ -223,7 +226,7 @@ print:flex print:text-[12px] flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono te
                <SocialButton
                   href={`tel:${contact.tel}`}
                   iconType="phone"
-                  label="Phone"
+                  label={contact.tel}
                />
             </li>
          )}
@@ -232,7 +235,7 @@ print:flex print:text-[12px] flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono te
                <SocialButton
                   href={social.url}
                   iconType={social.icon}
-                  label={social.name}
+                  label={social.label}
                />
             </li>
          ))}
@@ -246,18 +249,22 @@ print:flex print:text-[12px] flex-wrap gap-2 list-none gap-x-1 pt-1 font-mono te
 export function Header() {
    return (
       <header className="flex justify-between">
-         <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold" id="resume-name">
-               {RESUME_DATA.name}
-            </h1>
-            <p className="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
-               {RESUME_DATA.about}
-            </p>
+         <div className="flex-1 space-y-2">
+            <div className="flex justify-between">
+               <div className="flex-1 space-y-2">
+                  <h1 className="text-2xl font-bold" id="resume-name">
+                     {RESUME_DATA.name}
+                  </h1>
+                  <p className="max-w-lg text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
+                     {RESUME_DATA.about}
+                  </p>
 
-            <LocationLink
-               location={RESUME_DATA.location}
-               locationLink={RESUME_DATA.locationLink}
-            />
+                  <LocationLink
+                     location={RESUME_DATA.location}
+                     locationLink={RESUME_DATA.locationLink}
+                  />
+               </div>
+            </div>
 
             <ContactButtons
                contact={RESUME_DATA.contact}
@@ -271,7 +278,7 @@ export function Header() {
          </div>
 
          <Avatar
-            className="size-28 border border-input"
+            className="size-28 "
             src={RESUME_DATA.avatarUrl}
             alt={`${RESUME_DATA.name}'s profile picture`}
             fallback={RESUME_DATA.initials}

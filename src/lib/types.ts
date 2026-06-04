@@ -4,6 +4,16 @@ export type ResumeIcon = React.ComponentType<React.SVGProps<SVGSVGElement>> | St
 
 export type IconType = "github" | "linkedin" | "x" | "globe" | "mail" | "phone";
 
+export type LinkGeneral = {
+  url: string,
+  name: string,
+  label: string;
+}
+
+export interface LinkGeneralWithIcon extends LinkGeneral {
+  icon?: IconType; // <-- La nueva propiedad
+}
+
 export interface ResumeData {
   name: string;
   initials: string;
@@ -12,15 +22,11 @@ export interface ResumeData {
   about: string;
   summary: string | React.ReactNode;
   avatarUrl: string;
-  personalWebsiteUrl: string;
+  personalWebsiteUrl: LinkGeneral;
   contact: {
     email: string;
     tel: string;
-    social: Array<{
-      name: string;
-      url: string;
-      icon: IconType;
-    }>;
+    social: Array<LinkGeneralWithIcon>;
   };
   education: Array<{
     school: string;
@@ -36,6 +42,7 @@ export interface ResumeData {
     start: string;
     end: string | null;
     description: string | React.ReactNode;
+    highlights?: readonly string[];
   }>;
   skills: string[];
   projects: Array<{
@@ -98,7 +105,7 @@ export interface GraphQLMe {
   about: string;
   summary: string;
   avatarUrl: string;
-  personalWebsiteUrl: string;
+  personalWebsiteUrl: LinkGeneral;
   contact: GraphQLContact;
   education: GraphQLEducation[];
   work: GraphQLWork[];

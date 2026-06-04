@@ -89,13 +89,14 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-   const { company, link, badges, title, start, end, description } = work;
+   const { company, link, badges, title, start, end, description, highlights } =
+      work;
 
    return (
       <Card className="py-1 print:py-0">
          <CardHeader className="print:space-y-1">
             <div className="flex items-center justify-between gap-x-2 text-base">
-               <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
+               <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm  min-w-fit">
                   <CompanyLink company={company} link={link} />
                   <BadgeList
                      className="hidden gap-x-1 sm:inline-flex"
@@ -113,6 +114,20 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
          <CardContent>
             <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
                {description}
+               {highlights && highlights.length > 0 && (
+                  <ul>
+                     {/* Controla el espacio vertical entre cada fila */}
+                     {highlights.map((highlight) => (
+                        <li
+                           key={highlight}
+                           className="flex items-center gap-x-2"
+                        >
+                           <span className="flex rounded-full bg-current size-1"></span>
+                           <span>{highlight}</span>
+                        </li>
+                     ))}
+                  </ul>
+               )}
             </div>
             <div className="mt-2">
                <BadgeList

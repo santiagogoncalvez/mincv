@@ -53,7 +53,7 @@ function getCommandMenuLinks() {
    return [
       ...links,
       ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-         url: socialMediaLink.url,
+         url: socialMediaLink,
          title: socialMediaLink.name,
       })),
    ];
@@ -96,11 +96,11 @@ export default function ResumePage() {
                      </Suspense>
                   </SectionErrorBoundary>
 
-                  {/* <SectionErrorBoundary sectionName="Work Experience">
-              <Suspense fallback={<SectionSkeleton lines={6} />}>
-                <WorkExperience work={RESUME_DATA.work} />
-              </Suspense>
-            </SectionErrorBoundary> */}
+                  <SectionErrorBoundary sectionName="Work Experience">
+                     <Suspense fallback={<SectionSkeleton lines={6} />}>
+                        <WorkExperience work={RESUME_DATA.work} />
+                     </Suspense>
+                  </SectionErrorBoundary>
 
                   <SectionErrorBoundary sectionName="Skills">
                      <Suspense fallback={<SectionSkeleton lines={2} />}>
@@ -114,11 +114,11 @@ export default function ResumePage() {
                      </Suspense>
                   </SectionErrorBoundary>
 
-                  <SectionErrorBoundary sectionName="Education">
+                  {/* <SectionErrorBoundary sectionName="Education">
                      <Suspense fallback={<SectionSkeleton lines={3} />}>
                         <Education education={RESUME_DATA.education} />
                      </Suspense>
-                  </SectionErrorBoundary>
+                  </SectionErrorBoundary> */}
                </div>
             </section>
 

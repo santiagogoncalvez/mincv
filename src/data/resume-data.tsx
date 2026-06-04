@@ -9,7 +9,7 @@ export const RESUME_DATA: ResumeData = {
 
    locationLink: "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
 
-   about: "Desarrollador Frontend especializado en React, JavaScript y TypeScript. Desarrollo interfaces modernas, rápidas y mantenibles, enfocadas en experiencia de usuario, rendimiento y escalabilidad.",
+   about: "Desarrollador Frontend especializado en React y TypeScript.",
 
    summary: (
       <>
@@ -17,27 +17,18 @@ export const RESUME_DATA: ResumeData = {
          aplicaciones y plataformas web modernas utilizando{" "}
          <strong>React</strong>, <strong>JavaScript</strong> y{" "}
          <strong>TypeScript</strong>.
-         <br />
          Trabajo construyendo interfaces responsive, componentes reutilizables,
-         integración de APIs REST y experiencias enfocadas en rendimiento,
-         mantenibilidad y buenas prácticas frontend.
-         <br />
-         He desarrollado e-commerce, landing pages premium y plataformas web
-         modernas utilizando React, Astro y Tailwind CSS, colaborando
-         directamente con clientes desde la planificación hasta la
-         implementación final.
-         <br />
-         También tengo experiencia trabajando con manejo de estado, consumo de
-         APIs, dashboards y flujos frontend enfocados en mobile-first.
-         <br />
-         Actualmente continúo profundizando mis conocimientos en Next.js,
-         arquitectura frontend y desarrollo de aplicaciones escalables.
+         integración de APIs REST y experiencias enfocadas en rendimiento.
       </>
    ),
 
    avatarUrl: "https://github.com/santiagogoncalvez.png",
 
-   personalWebsiteUrl: "https://santiagogoncalvez.com",
+   personalWebsiteUrl: {
+      name: "Web personal",
+      url: "https://santiagogoncalvez.com",
+      label: "santiagogoncalvez.com",
+   },
 
    contact: {
       email: "santiago.goncalvez.dev@gmail.com",
@@ -49,12 +40,14 @@ export const RESUME_DATA: ResumeData = {
             name: "LinkedIn",
             url: "https://www.linkedin.com/in/santiagogoncalvez",
             icon: "linkedin",
+            label: "santiagogoncalvez",
          },
 
          {
             name: "GitHub",
             url: "https://github.com/santiagogoncalvez",
             icon: "github",
+            label: "santiagogoncalvez",
          },
       ],
    },
@@ -74,27 +67,70 @@ export const RESUME_DATA: ResumeData = {
 
    work: [
       {
-         company: "Freelance",
+         company: "Nidotrama",
 
-         link: "https://santiagogoncalvez.com",
+         link: "https://nidotrama.com",
 
-         badges: ["Remoto"],
+         badges: ["React", "TypeScript", "Astro", "Sanity CMS", "Tailwind CSS"],
+
+         title: "Frontend Developer (Freelance)",
+
+         start: "Abr. 2025",
+
+         end: "May. 2025",
+
+         description:
+            "Desarrollo de e-commerce para marca textil artesanal con catálogo autogestionable, páginas de producto y experiencia de compra optimizada.",
+
+         highlights: [
+            "Implementación de catálogo autogestionable con Sanity CMS",
+            "Optimización de rendimiento y experiencia mobile-first",
+            "Desarrollo de interfaz enfocada en conversión y usabilidad",
+         ],
+      },
+      {
+         company: "Jorgelina Reales",
+
+         link: "https://jorgelinareales.com.ar",
+
+         badges: ["React", "TypeScript", "Astro", "SEO", "Tailwind CSS"],
 
          title: "Frontend Developer",
 
-         start: "feb. 2026",
+         start: "Mar. 2025",
 
-         end: "Presente",
+         end: "Mar. 2025",
 
-         description: (
-            <>
-               Desarrollo de plataformas web utilizando React, TypeScript,
-               JavaScript y Astro. Implementación de interfaces responsive,
-               integración de APIs REST, optimización de rendimiento y
-               construcción de experiencias frontend modernas enfocadas en
-               mantenibilidad y escalabilidad.
-            </>
-         ),
+         description:
+            "Plataforma web optimizada para posicionamiento orgánico y velocidad de carga.",
+
+         highlights: [
+            "Métricas 100/100 en Google Lighthouse",
+            "Optimización SEO técnica y rendimiento",
+            "Experiencia responsive para todos los dispositivos",
+         ],
+      },
+      {
+         company: "Any Giraldez",
+
+         link: "https://anygiraldez.com",
+
+         badges: ["React", "TypeScript", "Astro", "Tailwind CSS", "SEO"],
+
+         title: "Frontend Developer (Freelance)",
+
+         start: "Feb. 2025",
+
+         end: "Mar. 2025",
+
+         description:
+            "Landing page premium enfocada en transmitir una identidad visual sofisticada y moderna.",
+
+         highlights: [
+            "Diseño responsive optimizado para mobile y desktop",
+            "Implementación de experiencia visual orientada a marca",
+            "Optimización de rendimiento y accesibilidad",
+         ],
       },
    ],
 
@@ -104,68 +140,59 @@ export const RESUME_DATA: ResumeData = {
       "TypeScript",
       "HTML5",
       "CSS3",
-      "Tailwind CSS",
+      "Next.js",
       "Astro",
+      "Tailwind CSS",
       "Git",
       "APIs REST",
-      "Responsive Design",
-      "Frontend Architecture",
-      "State Management",
-      "UI Components",
-      "Performance Optimization",
-      "SCRUM",
-      "Trabajo en equipo",
+      "GitHub",
+      "SEO",
+      "Sanity CMS",
    ],
 
    projects: [
       {
-         title: "Nidotrama E-commerce",
+         title: "Next.js Dashboard",
+         techStack: [
+            "Next.js",
+            "TypeScript",
+            "PostgreSQL",
+            "NextAuth",
+            "Tailwind CSS",
+         ],
+         description:
+            "Aplicación full-stack de administración con autenticación, Server Actions, Streaming, Suspense, validación con Zod y arquitectura basada en App Router.",
+         link: {
+            label: "GitHub",
+            href: "https://github.com/santiagogoncalvez/nextjs-fullstack-dashboard",
+         },
+      },
 
+      {
+         title: "Hacker Stories",
          techStack: [
             "React",
             "TypeScript",
-            "Astro",
-            "Sanity CMS",
-            "Tailwind CSS",
+            "TanStack Query",
+            "React Router",
+            "Vitest",
          ],
-
          description:
-            "E-commerce moderno con catálogo autogestionable, páginas de producto y experiencia responsive optimizada para rendimiento y experiencia de usuario.",
-
+            "Cliente avanzado de Hacker News con búsqueda, favoritos, historial, scroll infinito, testing y arquitectura escalable.",
          link: {
-            label: "Vista previa",
-
-            href: "https://nidotrama.com",
+            label: "Demo",
+            href: "https://hackerstories-dev.web.app",
          },
       },
 
       {
-         title: "Jorgelina Reales - La Flor Sagrada",
-
-         techStack: ["React", "TypeScript", "Astro", "SEO", "Tailwind CSS"],
-
+         title: "Tu País",
+         techStack: ["JavaScript", "HTML", "CSS"],
          description:
-            "Plataforma web optimizada para velocidad y posicionamiento orgánico, alcanzando métricas 100/100 en Google Lighthouse.",
-
+            "Juego de adivinanzas geográficas construido sin frameworks, con estado global propio, routing por hash y enfoque en UX.",
          link: {
-            label: "Vista previa",
-
-            href: "https://jorgelinareales.com.ar",
-         },
-      },
-
-      {
-         title: "Any Giraldez - Estilista de Autor",
-
-         techStack: ["React", "TypeScript", "Astro", "Tailwind CSS", "SEO"],
-
-         description:
-            "Landing page premium con foco en identidad visual, experiencia responsive y rendimiento en dispositivos móviles y escritorio.",
-
-         link: {
-            label: "Vista previa",
-
-            href: "https://anygiraldez.com",
+            label: "Demo",
+            href: "https://santiagogoncalvez.github.io/tupais/",
          },
       },
    ],

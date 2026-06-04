@@ -12,9 +12,10 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
+import { LinkGeneral } from "@/lib/types";
 
 interface Props {
-  links: { url: string; title: string }[];
+  links: { url: LinkGeneral; title: string }[];
 }
 
 export const CommandMenu = ({ links }: Props) => {
@@ -70,10 +71,10 @@ export const CommandMenu = ({ links }: Props) => {
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
               <CommandItem
-                key={url}
+                key={url.url}
                 onSelect={() => {
                   setOpen(false);
-                  window.open(url, "_blank");
+                  window.open(url.url, "_blank");
                 }}
               >
                 <span>{title}</span>
