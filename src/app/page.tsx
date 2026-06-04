@@ -80,7 +80,7 @@ export default function ResumePage() {
             </div>
 
             <section
-               className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4"
+               className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6"
                aria-label="Resume Content"
             >
                <SectionErrorBoundary sectionName="Header">
@@ -89,7 +89,7 @@ export default function ResumePage() {
                   </Suspense>
                </SectionErrorBoundary>
 
-               <div className="space-y-8 print:space-y-4">
+               <div className="space-y-8 print:space-y-6">
                   <SectionErrorBoundary sectionName="Summary">
                      <Suspense fallback={<SectionSkeleton lines={2} />}>
                         <Summary summary={RESUME_DATA.summary} />

@@ -105,7 +105,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
                      <ProjectTitle title={title} link={link} />
                   </CardTitle>
                   <CardDescription
-                     className="text-pretty font-mono text-xs print:text-[10px]"
+                     className="text-pretty font-mono text-xs print:text-[10px] "
                      aria-label="Project description"
                   >
                      {description}

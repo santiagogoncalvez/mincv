@@ -9,23 +9,21 @@ export const RESUME_DATA: ResumeData = {
 
    locationLink: "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
 
-   about: "Desarrollador Frontend especializado en React y TypeScript.",
+   about: "Frontend Developer especializado en React y TypeScript.",
 
    summary: (
       <>
-         <strong>Desarrollador Frontend</strong> con experiencia desarrollando
-         aplicaciones y plataformas web modernas utilizando{" "}
-         <strong>React</strong>, <strong>JavaScript</strong> y{" "}
-         <strong>TypeScript</strong>.
-         Trabajo construyendo interfaces responsive, componentes reutilizables,
-         integración de APIs REST y experiencias enfocadas en rendimiento.
+         Desarrollo aplicaciones web con React y TypeScript enfocadas en
+         arquitectura mantenible, experiencia de usuario y escalabilidad.
+         Experiencia construyendo productos reales para clientes y proyectos
+         full-stack con Next.js.
       </>
    ),
 
    avatarUrl: "https://github.com/santiagogoncalvez.png",
 
    personalWebsiteUrl: {
-      name: "Web personal",
+      name: "Portfolio",
       url: "https://santiagogoncalvez.com",
       label: "santiagogoncalvez.com",
    },
@@ -54,10 +52,9 @@ export const RESUME_DATA: ResumeData = {
 
    education: [
       {
-         school: "Ingeniería Informática (en curso)",
+         school: "Universidad Nacional de La Matanza",
 
-         degree:
-            "Universidad Nacional de La Matanza. Formación enfocada en lógica, arquitectura de software y resolución de problemas.",
+         degree: "Ingeniería Informática (en curso)",
 
          start: "2023",
 
@@ -71,7 +68,7 @@ export const RESUME_DATA: ResumeData = {
 
          link: "https://nidotrama.com",
 
-         badges: ["React", "TypeScript", "Astro", "Sanity CMS", "Tailwind CSS"],
+         badges: ["React", "TypeScript", "Astro", "Sanity CMS"],
 
          title: "Frontend Developer (Freelance)",
 
@@ -80,42 +77,38 @@ export const RESUME_DATA: ResumeData = {
          end: "May. 2025",
 
          description:
-            "Desarrollo de e-commerce para marca textil artesanal con catálogo autogestionable, páginas de producto y experiencia de compra optimizada.",
-
+            "E-commerce autogestionable desarrollado con Astro, React y Sanity CMS.",
          highlights: [
-            "Implementación de catálogo autogestionable con Sanity CMS",
-            "Optimización de rendimiento y experiencia mobile-first",
-            "Desarrollo de interfaz enfocada en conversión y usabilidad",
+            "Implementación de catálogo autogestionable mediante Sanity CMS.",
          ],
       },
+
       {
          company: "Jorgelina Reales",
 
          link: "https://jorgelinareales.com.ar",
 
-         badges: ["React", "TypeScript", "Astro", "SEO", "Tailwind CSS"],
+         badges: ["React", "TypeScript", "Astro", "Tailwind CSS"],
 
-         title: "Frontend Developer",
+         title: "Frontend Developer (Freelance)",
 
          start: "Mar. 2025",
 
          end: "Mar. 2025",
 
          description:
-            "Plataforma web optimizada para posicionamiento orgánico y velocidad de carga.",
-
+            "Plataforma web optimizada para SEO, rendimiento y experiencia de usuario.",
          highlights: [
-            "Métricas 100/100 en Google Lighthouse",
-            "Optimización SEO técnica y rendimiento",
-            "Experiencia responsive para todos los dispositivos",
+            "Optimización SEO y rendimiento alcanzando métricas 100/100 en Lighthouse.",
          ],
       },
+
       {
          company: "Any Giraldez",
 
          link: "https://anygiraldez.com",
 
-         badges: ["React", "TypeScript", "Astro", "Tailwind CSS", "SEO"],
+         badges: ["React", "TypeScript", "Astro", "Tailwind CSS"],
 
          title: "Frontend Developer (Freelance)",
 
@@ -124,35 +117,49 @@ export const RESUME_DATA: ResumeData = {
          end: "Mar. 2025",
 
          description:
-            "Landing page premium enfocada en transmitir una identidad visual sofisticada y moderna.",
-
+            "Landing page premium enfocada en identidad visual y conversión.",
          highlights: [
-            "Diseño responsive optimizado para mobile y desktop",
-            "Implementación de experiencia visual orientada a marca",
-            "Optimización de rendimiento y accesibilidad",
+            "Desarrollo de experiencia visual premium alineada a la identidad de marca.",
+         ],
+      },
+      {
+         company: "Isabel López",
+
+         link: "https://isabellopez.com.ar", // o la URL que corresponda
+
+         badges: ["Astro", "React", "TypeScript", "Tailwind CSS"],
+
+         title: "Frontend Developer (Freelance)",
+
+         start: "Feb. 2025",
+
+         end: "Feb. 2025",
+
+         description:
+            "Landing page profesional para coaching ontológico enfocada en conversión, experiencia de usuario y posicionamiento SEO.",
+         highlights: [
+            "Diseño de arquitectura visual y contenido orientados a conversión.",
          ],
       },
    ],
 
    skills: [
       "React",
-      "JavaScript",
       "TypeScript",
-      "HTML5",
-      "CSS3",
       "Next.js",
       "Astro",
       "Tailwind CSS",
-      "Git",
-      "APIs REST",
-      "GitHub",
-      "SEO",
+      "PostgreSQL",
       "Sanity CMS",
+      "Vitest",
+      "Git",
+      "REST APIs",
    ],
 
    projects: [
       {
          title: "Next.js Dashboard",
+
          techStack: [
             "Next.js",
             "TypeScript",
@@ -160,16 +167,20 @@ export const RESUME_DATA: ResumeData = {
             "NextAuth",
             "Tailwind CSS",
          ],
+
          description:
-            "Aplicación full-stack de administración con autenticación, Server Actions, Streaming, Suspense, validación con Zod y arquitectura basada en App Router.",
+            "Aplicación full-stack con autenticación, Server Actions y PostgreSQL.",
+
          link: {
             label: "GitHub",
+
             href: "https://github.com/santiagogoncalvez/nextjs-fullstack-dashboard",
          },
       },
 
       {
          title: "Hacker Stories",
+
          techStack: [
             "React",
             "TypeScript",
@@ -177,21 +188,27 @@ export const RESUME_DATA: ResumeData = {
             "React Router",
             "Vitest",
          ],
+
          description:
-            "Cliente avanzado de Hacker News con búsqueda, favoritos, historial, scroll infinito, testing y arquitectura escalable.",
+            "Cliente avanzado de Hacker News construido con React y TypeScript.",
+
          link: {
             label: "Demo",
+
             href: "https://hackerstories-dev.web.app",
          },
       },
-
       {
          title: "Tu País",
+
          techStack: ["JavaScript", "HTML", "CSS"],
+
          description:
-            "Juego de adivinanzas geográficas construido sin frameworks, con estado global propio, routing por hash y enfoque en UX.",
+            "Juego de adivinanzas geográficas desarrollado con JavaScript vanilla.",
+
          link: {
             label: "Demo",
+
             href: "https://santiagogoncalvez.github.io/tupais/",
          },
       },

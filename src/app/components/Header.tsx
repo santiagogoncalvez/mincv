@@ -36,7 +36,7 @@ interface LocationLinkProps {
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
    return (
-      <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
+      <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground/80">
          <a
             className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
             href={locationLink}
@@ -74,9 +74,12 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
             rel="noopener noreferrer"
          >
             {IconComponent && (
-               <IconComponent className="size-4" aria-hidden="true" />
+               <IconComponent
+                  className="size-4 text-foreground"
+                  aria-hidden="true"
+               />
             )}
-            {label}
+            <span className="text-foreground/80">{label}</span>
          </a>
       </Button>
    );
@@ -90,7 +93,7 @@ interface ContactButtonsProps {
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
    return (
       <ul
-         className="flex flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm text-foreground/80 print:hidden"
+         className="flex flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm  print:hidden"
          aria-label="Contact links"
       >
          {personalWebsiteUrl && (
@@ -138,69 +141,11 @@ interface PrintContactProps {
    personalWebsiteUrl?: LinkGeneralWithIcon;
 }
 
-/*
-function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
-   return (
-      <div className="hidden gap-x-2 font-mono text-sm text-foreground/80 print:flex print:text-[12px] flex flex-wrap">
-         {personalWebsiteUrl && (
-            <>
-               <a
-                  className=" hover:text-foreground/70"
-                  href={personalWebsiteUrl}
-               >
-                  {new URL(personalWebsiteUrl).hostname}
-               </a>
-               <span aria-hidden="true">/</span>
-            </>
-         )}
-         {contact.email && (
-            <>
-               <a
-                  className=" hover:text-foreground/70"
-                  href={`mailto:${contact.email}`}
-               >
-                  {contact.email}
-               </a>
-               <span aria-hidden="true">/</span>
-            </>
-         )}
-         {contact.tel && (
-            <>
-               <a
-                  className=" hover:text-foreground/70"
-                  href={`tel:${contact.tel}`}
-               >
-                  {contact.tel}
-               </a>
-               <span aria-hidden="true">/</span>
-            </>
-         )}
-         {contact.social.map((item, index) => (
-            <>
-               <a
-                  key={index}
-                  className=" hover:text-foreground/70"
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-               >
-                  {formatLink(formatLink(item.url))}
-               </a>
-               {index !== contact.social.length - 1 && (
-                  <span aria-hidden="true">/</span>
-               )}
-            </>
-         ))}
-      </div>
-   );
-}
-*/
-
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
    return (
       <ul
          className="hidden
-print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm text-foreground/80"
+print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm "
          aria-label="Contact links"
       >
          {personalWebsiteUrl && (
