@@ -34,6 +34,14 @@ export interface ResumeData {
     start: string;
     end: string;
   }>;
+  courses: Array<{
+    name: string;
+    date: string;
+  }>;
+  languages: Array<{
+    name: string;
+    level: string;
+  }>;
   work: Array<{
     company: string;
     link: string;

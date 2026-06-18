@@ -11,6 +11,8 @@ import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import { Summary } from "./components/Summary";
 import { WorkExperience } from "./components/WorkExperience";
+import { Courses } from "./components/Courses";
+import { Languages } from "./components/Languages";
 
 export const metadata: Metadata = {
    title: `${RESUME_DATA.name}`,
@@ -102,9 +104,9 @@ export default function ResumePage() {
                      </Suspense>
                   </SectionErrorBoundary>
 
-                  <SectionErrorBoundary sectionName="Skills">
-                     <Suspense fallback={<SectionSkeleton lines={2} />}>
-                        <Skills skills={RESUME_DATA.skills} />
+                  <SectionErrorBoundary sectionName="Education">
+                     <Suspense fallback={<SectionSkeleton lines={3} />}>
+                        <Education education={RESUME_DATA.education} />
                      </Suspense>
                   </SectionErrorBoundary>
 
@@ -114,9 +116,20 @@ export default function ResumePage() {
                      </Suspense>
                   </SectionErrorBoundary>
 
-                  <SectionErrorBoundary sectionName="Education">
+                  <SectionErrorBoundary sectionName="Skills">
+                     <Suspense fallback={<SectionSkeleton lines={2} />}>
+                        <Skills skills={RESUME_DATA.skills} />
+                     </Suspense>
+                  </SectionErrorBoundary>
+
+                  <SectionErrorBoundary sectionName="courses">
                      <Suspense fallback={<SectionSkeleton lines={3} />}>
-                        <Education education={RESUME_DATA.education} />
+                        <Courses courses={RESUME_DATA.courses} />
+                     </Suspense>
+                  </SectionErrorBoundary>
+                  <SectionErrorBoundary sectionName="languages">
+                     <Suspense fallback={<SectionSkeleton lines={3} />}>
+                        <Languages languages={RESUME_DATA.languages} />
                      </Suspense>
                   </SectionErrorBoundary>
                </div>

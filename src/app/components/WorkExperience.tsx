@@ -124,7 +124,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
                         >
                            {/* h-6 debe coincidir con el line-height del texto para centrarlo verticalmente en la primera línea */}
                            <span className="flex items-center justify-center h-4">
-                              <span className="rounded-full bg-current size-1"></span>
+                              <span className="rounded-full bg-current size-1"/>
                            </span>
                            <span className="leading-4">{highlight}</span>
                         </li>

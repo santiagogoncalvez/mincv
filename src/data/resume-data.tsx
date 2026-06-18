@@ -55,11 +55,45 @@ export const RESUME_DATA: ResumeData = {
       {
          school: "Universidad Nacional de la Matanza",
 
-         degree: 'Grado en Ingeniería, Computer Science. Cursé el primer año de una carrera orientada al desarrollo de software y la resolución de problemas complejos. Durante esta etapa adquirí bases de programación estructurada, lógica algorítmica, fundamentos de sistemas y pensamiento computacional. Complemento esta formación con proyectos prácticos de desarrollo frontend utilizando React y TypeScript, aplicando buenas prácticas de arquitectura, optimización de rendimiento y experiencia de usuario.',
+         degree:
+            "Grado en Ingeniería, Computer Science. Cursé el primer año de una carrera orientada al desarrollo de software y la resolución de problemas complejos. Durante esta etapa adquirí bases de programación estructurada, lógica algorítmica, fundamentos de sistemas y pensamiento computacional. Complemento esta formación con proyectos prácticos de desarrollo frontend utilizando React y TypeScript, aplicando buenas prácticas de arquitectura, optimización de rendimiento y experiencia de usuario.",
 
          start: "jul. 2023",
 
          end: "jul. 2025",
+      },
+   ],
+   courses: [
+      {
+         name: "Next.js App Router Fundamentals - Vercel",
+
+         date: "2026",
+      },
+      {
+         name: "Especialización en React - Midudev",
+
+         date: "2025",
+      },
+      {
+         name: "The Road to React - Robin Wieruch",
+
+         date: "2025",
+      },
+      {
+         name: "Eloquent JavaScript - Marijn Haverbeke",
+
+         date: "2024",
+      },
+   ],
+
+   languages: [
+      {
+         name: "Español",
+         level: "Nativo",
+      },
+      {
+         name: "Inglés",
+         level: "B1",
       },
    ],
 
@@ -231,8 +265,9 @@ export const RESUME_DATA: ResumeData = {
 
    skills: [
       "React",
-      "Next.js",
       "TypeScript",
+      "Next.js",
+      "Astro Framework",
       "JavaScript ES6+",
       "HTML5",
       "CSS3",
@@ -241,10 +276,16 @@ export const RESUME_DATA: ResumeData = {
       "REST APIs",
       "TanStack Query",
       "State Management",
-      "Vitest",
       "Git",
       "GitHub",
-      "Astro",
+      "Sanity CMS",
+      "SEO",
+      "UX/UI",
+      "Rendimiento Web",
+      "Resolución de problemas",
+      "Atención al detalle",
+      "Proactividad",
+      "Comunicación",
    ],
 
    projects: [
