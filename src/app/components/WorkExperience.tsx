@@ -106,7 +106,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
                <WorkPeriod start={start} end={end} />
             </div>
 
-            <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+            <h4 className=" text-sm font-semibold leading-none print:text-[12px]">
                {title}
             </h4>
          </CardHeader>
@@ -120,10 +120,13 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
                      {highlights.map((highlight) => (
                         <li
                            key={highlight}
-                           className="flex items-center gap-x-2"
+                           className="flex items-start gap-x-2"
                         >
-                           <span className="flex rounded-full bg-current size-1"></span>
-                           <span>{highlight}</span>
+                           {/* h-6 debe coincidir con el line-height del texto para centrarlo verticalmente en la primera línea */}
+                           <span className="flex items-center justify-center h-4">
+                              <span className="rounded-full bg-current size-1"></span>
+                           </span>
+                           <span className="leading-4">{highlight}</span>
                         </li>
                      ))}
                   </ul>

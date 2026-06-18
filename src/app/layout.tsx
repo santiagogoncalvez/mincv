@@ -1,22 +1,19 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+// import { GeistMono } from "geist/font/mono";
 
-import "./globals.css";
+import "@/app/globals.css";
 import type React from "react";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { RESUME_DATA } from "@/data/resume-data";
 
-const inter = Inter({
-   subsets: ["latin"],
-   display: "swap",
-});
+import localFont from "next/font/local";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-   subsets: ["latin"],
-   display: "swap",
+export const satoshi = localFont({
+   src: "../fonts/Satoshi-Variable.woff2",
+   variable: "--font-satoshi",
+   weight: "300 900",
 });
 
 export const metadata: Metadata = {
@@ -93,7 +90,7 @@ export default function RootLayout({
    return (
       <html
          lang="en"
-         className={`${GeistSans.className} ${GeistMono.variable}`}
+         className={`${satoshi.className}`}
       >
          <body>
             <ErrorBoundary>{children}</ErrorBoundary>

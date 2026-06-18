@@ -16,7 +16,7 @@ interface EducationPeriodProps {
 function EducationPeriod({ start, end }: EducationPeriodProps) {
    return (
       <div
-         className="text-sm tabular-nums text-gray-500"
+         className="text-xs tabular-nums text-gray-500"
          title={`Period: ${start} to ${end}`}
       >
          {start} - {end}
@@ -39,7 +39,7 @@ function EducationItem({ education }: EducationItemProps) {
          <CardHeader>
             <div className="flex items-center justify-between gap-x-2 text-base">
                <h3
-                  className="font-semibold leading-none"
+                  className="font-semibold leading-none print:text-sm"
                   id={`education-${school.toLowerCase().replace(/\s+/g, "-")}`}
                >
                   {school}
@@ -48,7 +48,7 @@ function EducationItem({ education }: EducationItemProps) {
             </div>
          </CardHeader>
          <CardContent
-            className="mt-2 text-foreground/80 print:text-[12px]"
+            className="mt-2 text-foreground/80 text-xs print:text-[10px]"
             aria-labelledby={`education-${school
                .toLowerCase()
                .replace(/\s+/g, "-")}`}

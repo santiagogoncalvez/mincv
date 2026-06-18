@@ -1,20 +1,18 @@
-import { GlobeIcon, MailIcon, PhoneIcon, MapPinIcon } from "lucide-react";
-import Image, { type StaticImageData } from "next/image";
-import React from "react";
+import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { Avatar } from "@/components/avatar";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
 import { RESUME_DATA } from "@/data/resume-data";
-import type { ResumeIcon, IconType, LinkGeneralWithIcon } from "@/lib/types";
+import type { IconType, LinkGeneralWithIcon } from "@/lib/types";
 
-const formatLink = (str: string) =>
-   str
-      .replace("mailto:", "")
-      .replace("https://www.", "")
-      .replace("https://", "")
-      .replace("http://www.", "")
-      .replace("tel:", "");
+// const formatLink = (str: string) =>
+//    str
+//       .replace("mailto:", "")
+//       .replace("https://www.", "")
+//       .replace("https://", "")
+//       .replace("http://www.", "")
+//       .replace("tel:", "");
 
 // Type-safe icon mapping
 const ICON_MAP: Record<
@@ -36,7 +34,7 @@ interface LocationLinkProps {
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
    return (
-      <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground/80">
+      <p className="max-w-md items-center text-pretty  text-xs text-foreground/80">
          <a
             className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
             href={locationLink}
@@ -93,18 +91,9 @@ interface ContactButtonsProps {
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
    return (
       <ul
-         className="flex flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm  print:hidden"
+         className="flex flex-wrap list-none gap-x-4 gap-y-2  text-sm  print:hidden"
          aria-label="Contact links"
       >
-         {personalWebsiteUrl && (
-            <li>
-               <SocialButton
-                  href={personalWebsiteUrl.url}
-                  iconType="globe"
-                  label={personalWebsiteUrl.label}
-               />
-            </li>
-         )}
          {contact.email && (
             <li>
                <SocialButton
@@ -124,13 +113,39 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
             </li>
          )}
          {contact.social.map((social) => (
-            <li key={social.name}>
+            <>
+               {social.name === "LinkedIn" && (
+                  <li key={social.name}>
+                     <SocialButton
+                        href={social.url}
+                        iconType={social.icon}
+                        label={social.label}
+                     />
+                  </li>
+               )}
+            </>
+         ))}
+         {personalWebsiteUrl && (
+            <li>
                <SocialButton
-                  href={social.url}
-                  iconType={social.icon}
-                  label={social.label}
+                  href={personalWebsiteUrl.url}
+                  iconType="globe"
+                  label={personalWebsiteUrl.label}
                />
             </li>
+         )}
+         {contact.social.map((social) => (
+            <>
+               {social.name === "GitHub" && (
+                  <li key={social.name}>
+                     <SocialButton
+                        href={social.url}
+                        iconType={social.icon}
+                        label={social.label}
+                     />
+                  </li>
+               )}
+            </>
          ))}
       </ul>
    );
@@ -145,7 +160,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
    return (
       <ul
          className="hidden
-print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2 font-mono text-sm "
+print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2  text-sm "
          aria-label="Contact links"
       >
          {personalWebsiteUrl && (
@@ -200,7 +215,7 @@ export function Header() {
                   <h1 className="text-2xl font-bold" id="resume-name">
                      {RESUME_DATA.name}
                   </h1>
-                  <p className="max-w-lg text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
+                  <p className="max-w-lg text-pretty  text-sm text-foreground/80 print:text-[12px]">
                      {RESUME_DATA.about}
                   </p>
 

@@ -72,7 +72,7 @@ export default function ResumePage() {
             }}
          />
          <main
-            className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-11 md:p-16"
+            className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16"
             id="main-content"
          >
             <div className="sr-only">
@@ -114,17 +114,17 @@ export default function ResumePage() {
                      </Suspense>
                   </SectionErrorBoundary>
 
-                  {/* <SectionErrorBoundary sectionName="Education">
+                  <SectionErrorBoundary sectionName="Education">
                      <Suspense fallback={<SectionSkeleton lines={3} />}>
                         <Education education={RESUME_DATA.education} />
                      </Suspense>
-                  </SectionErrorBoundary> */}
+                  </SectionErrorBoundary>
                </div>
             </section>
 
-            <nav className="print:hidden" aria-label="Quick navigation">
+            {/* <nav className="print:hidden" aria-label="Quick navigation">
                <CommandMenu links={getCommandMenuLinks()} />
-            </nav>
+            </nav> */}
          </main>
       </>
    );

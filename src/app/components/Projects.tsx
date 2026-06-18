@@ -42,7 +42,7 @@ function ProjectTitle({ title, link }: ProjectLinkProps) {
             />
          </span>
          <div
-            className="hidden font-mono text-xs underline print:visible"
+            className="hidden  text-xs underline print:visible"
             aria-hidden="true"
          >
             {link.replace("https://", "").replace("www.", "").replace("/", "")}
@@ -105,7 +105,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
                      <ProjectTitle title={title} link={link} />
                   </CardTitle>
                   <CardDescription
-                     className="text-pretty font-mono text-xs print:text-[10px] "
+                     className="text-pretty  text-xs print:text-[10px] "
                      aria-label="Project description"
                   >
                      {description}

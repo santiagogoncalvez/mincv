@@ -18,7 +18,7 @@ export function Summary({ summary, className }: AboutProps) {
             Sobre mí
             {/* About me */}
          </h2>
-         <div className="text-pretty font-mono text-sm text-foreground/80 print:text-[12px]">
+         <div className="text-pretty  text-sm text-foreground/80 print:text-[12px]">
             {summary}
          </div>
       </Section>
