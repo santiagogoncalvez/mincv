@@ -97,7 +97,9 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
          <CardHeader className="print:space-y-1">
             <div className="flex items-center justify-between gap-x-2 text-base">
                <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm  min-w-fit">
-                  <CompanyLink company={company} link={link} />
+                  {link ? (
+                     <CompanyLink company={company} link={link} />
+                  ) : company}
                   <BadgeList
                      className="hidden gap-x-1 sm:inline-flex"
                      badges={badges}
@@ -124,7 +126,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
                         >
                            {/* h-6 debe coincidir con el line-height del texto para centrarlo verticalmente en la primera línea */}
                            <span className="flex items-center justify-center h-4">
-                              <span className="rounded-full bg-current size-1"/>
+                              <span className="rounded-full bg-current size-1" />
                            </span>
                            <span className="leading-4">{highlight}</span>
                         </li>
@@ -155,7 +157,7 @@ export function WorkExperience({ work }: WorkExperienceProps) {
    return (
       <Section>
          <h2 className="text-xl font-semibold" id="work-experience">
-            Experiencia profesional
+            Experiencia
          </h2>
          <div
             className="space-y-4 print:space-y-0"

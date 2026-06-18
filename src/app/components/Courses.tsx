@@ -5,19 +5,20 @@ import type { RESUME_DATA } from "@/data/resume-data";
 type Courses = (typeof RESUME_DATA)["courses"][number];
 
 interface CoursesPeriodProps {
-   date: Courses["date"];
+   start: Courses["start"];
+   end: Courses["end"];
 }
 
 /**
  * Displays the courses period in a consistent format
  */
-function CoursePeriod({ date}: CoursesPeriodProps) {
+function CoursePeriod({ start, end}: CoursesPeriodProps) {
    return (
       <div
          className="text-xs tabular-nums text-gray-500"
-         title={`Period: ${date}`}
+         title={`Period: ${start} to ${end}`}
       >
-         {date}
+         {start} - {end}
       </div>
    );
 }
@@ -30,7 +31,7 @@ interface CoursesItemProps {
  * Individual courses card component
  */
 function CoursesItem({ courses }: CoursesItemProps) {
-   const { name, date } = courses;
+   const { name, start, end } = courses;
 
    return (
       <Card>
@@ -42,7 +43,7 @@ function CoursesItem({ courses }: CoursesItemProps) {
                >
                   {name}
                </h3>
-               <CoursePeriod date={date} />
+               <CoursePeriod start={start} end={end} />
             </div>
          </CardHeader>
       </Card>

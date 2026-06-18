@@ -65,24 +65,28 @@ export const RESUME_DATA: ResumeData = {
    ],
    courses: [
       {
-         name: "Next.js App Router Fundamentals - Vercel",
+         name: "Next.js App Router Fundamentals de Vercel",
 
-         date: "2026",
+         start: "may. 2026",
+         end: "may. 2026",
       },
       {
-         name: "Especialización en React - Midudev",
+         name: "Especialización en React de Midudev",
 
-         date: "2025",
+         start: "nov. 2025",
+         end: "ene. 2026",
       },
       {
-         name: "The Road to React - Robin Wieruch",
+         name: "The Road to React de Robin Wieruch",
 
-         date: "2025",
+         start: "jun. 2025",
+         end: "nov. 2025",
       },
       {
-         name: "Eloquent JavaScript - Marijn Haverbeke",
+         name: "Eloquent JavaScript de Marijn Haverbeke",
 
-         date: "2024",
+         start: "ene. 2025",
+         end: "abr. 2025",
       },
    ],
 
@@ -301,7 +305,7 @@ export const RESUME_DATA: ResumeData = {
          ],
 
          description:
-            "Aplicación full-stack desarrollada con Next.js App Router, TypeScript y PostgreSQL. Incluye autenticación, Server Actions y arquitectura orientada a escalabilidad.",
+            "Desarrollé una plataforma administrativa utilizando Next.js App Router como parte de mi proceso de profundización en desarrollo full stack moderno.",
 
          link: {
             label: "GitHub",
@@ -321,7 +325,7 @@ export const RESUME_DATA: ResumeData = {
          ],
 
          description:
-            "Aplicación React basada en consumo de APIs con TanStack Query para gestión de estado remoto, caché, scroll infinito y testing con Vitest.",
+            "Cliente avanzado de Hacker News desarrollado con React y TypeScript, enfocado en la experiencia de usuario, rendimiento y arquitectura escalable.",
 
          link: {
             label: "Demo",
@@ -335,7 +339,7 @@ export const RESUME_DATA: ResumeData = {
          techStack: ["JavaScript", "HTML", "CSS"],
 
          description:
-            "SPA desarrollada con JavaScript puro implementando gestión de estado global, routing y arquitectura modular.",
+            "Juego interactivo de adivinanzas de banderas desarrollado en Vanilla JavaScript, HTML5 y CSS.",
 
          link: {
             label: "Demo",

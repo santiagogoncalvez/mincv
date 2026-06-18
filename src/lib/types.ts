@@ -36,7 +36,8 @@ export interface ResumeData {
   }>;
   courses: Array<{
     name: string;
-    date: string;
+    start: string;
+    end: string;
   }>;
   languages: Array<{
     name: string;
