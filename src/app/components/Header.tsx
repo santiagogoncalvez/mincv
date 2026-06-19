@@ -163,15 +163,6 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
 print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2  text-sm "
          aria-label="Contact links"
       >
-         {personalWebsiteUrl && (
-            <li>
-               <SocialButton
-                  href={personalWebsiteUrl.url}
-                  iconType="globe"
-                  label={personalWebsiteUrl.label}
-               />
-            </li>
-         )}
          {contact.email && (
             <li>
                <SocialButton
@@ -191,13 +182,39 @@ print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2  text-sm "
             </li>
          )}
          {contact.social.map((social) => (
-            <li key={social.name}>
+            <>
+               {social.name === "LinkedIn" && (
+                  <li key={social.name}>
+                     <SocialButton
+                        href={social.url}
+                        iconType={social.icon}
+                        label={social.label}
+                     />
+                  </li>
+               )}
+            </>
+         ))}
+         {personalWebsiteUrl && (
+            <li>
                <SocialButton
-                  href={social.url}
-                  iconType={social.icon}
-                  label={social.label}
+                  href={personalWebsiteUrl.url}
+                  iconType="globe"
+                  label={personalWebsiteUrl.label}
                />
             </li>
+         )}
+         {contact.social.map((social) => (
+            <>
+               {social.name === "GitHub" && (
+                  <li key={social.name}>
+                     <SocialButton
+                        href={social.url}
+                        iconType={social.icon}
+                        label={social.label}
+                     />
+                  </li>
+               )}
+            </>
          ))}
       </ul>
    );

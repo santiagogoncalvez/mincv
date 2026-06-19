@@ -15,8 +15,8 @@ export const RESUME_DATA: ResumeData = {
    summary: (
       <>
          Frontend Developer con experiencia desarrollando productos para
-         clientes utilizando React,TypeScript, Next.js y Astro. Me enfoco en
-         construir interfaces rápidas, mantenibles yorientadas a la experiencia
+         clientes utilizando React, TypeScript, Next.js y Astro. Me enfoco en
+         construir interfaces rápidas, mantenibles y orientadas a la experiencia
          de usuario.
       </>
    ),
@@ -56,7 +56,7 @@ export const RESUME_DATA: ResumeData = {
          school: "Universidad Nacional de la Matanza",
 
          degree:
-            "Grado en Ingeniería, Computer Science. Cursé el primer año de una carrera orientada al desarrollo de software y la resolución de problemas complejos. Durante esta etapa adquirí bases de programación estructurada, lógica algorítmica, fundamentos de sistemas y pensamiento computacional. Complemento esta formación con proyectos prácticos de desarrollo frontend utilizando React y TypeScript, aplicando buenas prácticas de arquitectura, optimización de rendimiento y experiencia de usuario.",
+            "Grado en Ingeniería, Ingeniería Informática. Cursé el primer año de una carrera orientada al desarrollo de software y la resolución de problemas complejos. Durante esta etapa adquirí bases de programación estructurada, lógica algorítmica, fundamentos de sistemas y pensamiento computacional. Complemento esta formación con proyectos prácticos de desarrollo frontend utilizando React y TypeScript, aplicando buenas prácticas de arquitectura, optimización de rendimiento y experiencia de usuario.",
 
          start: "jul. 2023",
 
@@ -260,7 +260,7 @@ export const RESUME_DATA: ResumeData = {
          highlights: [
             "Gestión, organización y mantenimiento de documentación digital mediante Google Workspace y Microsoft Office.",
             "Resolución remota de incidencias técnicas utilizando AnyDesk, incluyendo diagnóstico, optimización y configuración de equipos Windows.",
-            "Configuración y soporte de herramientas de comunicación y videoconferencia como Zoom, Google Meet y OBS",
+            "Configuración y soporte de herramientas de comunicación y videoconferencia como Zoom, Google Meet y OBS.",
             "Implementación de backups, instalación de software y asistencia en tareas de mantenimiento tecnológico.",
             "Comunicación de soluciones técnicas de forma clara y accesible para usuarios no especializados.",
          ],

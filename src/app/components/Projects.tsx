@@ -101,7 +101,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
          <Card className="flex h-full flex-col overflow-hidden border  p-3">
             <CardHeader>
                <div className="space-y-1">
-                  <CardTitle className="text-base">
+                  <CardTitle className="text-base print:text-sm">
                      <ProjectTitle title={title} link={link} />
                   </CardTitle>
                   <CardDescription
