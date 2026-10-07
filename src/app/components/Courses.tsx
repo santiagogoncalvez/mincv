@@ -59,6 +59,8 @@ interface CoursesListProps {
  * Renders a list of courses experiences
  */
 export function Courses({ courses }: CoursesListProps) {
+   if (!courses.length) return null;
+
    return (
       <Section>
          <h2 className="text-xl font-semibold" id="courses-section">

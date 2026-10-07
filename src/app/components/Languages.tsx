@@ -58,6 +58,8 @@ interface LanguagesListProps {
  * Renders a list of languages experiences
  */
 export function Languages({ languages }: LanguagesListProps) {
+   if (!languages.length) return null;
+
    return (
       <Section>
          <h2 className="text-xl font-semibold" id="languages-section">

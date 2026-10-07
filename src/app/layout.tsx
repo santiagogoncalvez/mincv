@@ -45,7 +45,7 @@ export const metadata: Metadata = {
    openGraph: {
       type: "website",
       locale: "en_US",
-      url: RESUME_DATA.personalWebsiteUrl.url,
+      url: RESUME_DATA.personalWebsiteUrl?.url,
       siteName: `${RESUME_DATA.name}'s CV`,
       title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
       description: RESUME_DATA.about,
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       creator: "@BartoszJarocki",
    },
    alternates: {
-      canonical: RESUME_DATA.personalWebsiteUrl.url,
+      canonical: RESUME_DATA.personalWebsiteUrl?.url,
    },
 };
 

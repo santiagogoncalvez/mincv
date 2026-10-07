@@ -85,7 +85,7 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
 
 interface ContactButtonsProps {
    contact: typeof RESUME_DATA.contact;
-   personalWebsiteUrl?: LinkGeneralWithIcon;
+   personalWebsiteUrl?: LinkGeneralWithIcon | null;
 }
 
 function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
@@ -94,15 +94,6 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
          className="flex flex-wrap list-none gap-x-4 gap-y-2  text-sm  print:hidden"
          aria-label="Contact links"
       >
-         {contact.email && (
-            <li>
-               <SocialButton
-                  href={`mailto:${contact.email}`}
-                  iconType="mail"
-                  label={contact.email}
-               />
-            </li>
-         )}
          {contact.tel && (
             <li>
                <SocialButton
@@ -112,6 +103,16 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
                />
             </li>
          )}
+         {contact.email && (
+            <li>
+               <SocialButton
+                  href={`mailto:${contact.email}`}
+                  iconType="mail"
+                  label={contact.email}
+               />
+            </li>
+         )}
+
          {contact.social.map((social) => (
             <>
                {social.name === "LinkedIn" && (
@@ -153,7 +154,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 
 interface PrintContactProps {
    contact: typeof RESUME_DATA.contact;
-   personalWebsiteUrl?: LinkGeneralWithIcon;
+   personalWebsiteUrl?: LinkGeneralWithIcon | null;
 }
 
 function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
@@ -163,21 +164,21 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
 print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2  text-sm "
          aria-label="Contact links"
       >
-         {contact.email && (
-            <li>
-               <SocialButton
-                  href={`mailto:${contact.email}`}
-                  iconType="mail"
-                  label={contact.email}
-               />
-            </li>
-         )}
          {contact.tel && (
             <li>
                <SocialButton
                   href={`tel:${contact.tel}`}
                   iconType="phone"
                   label={contact.tel}
+               />
+            </li>
+         )}
+         {contact.email && (
+            <li>
+               <SocialButton
+                  href={`mailto:${contact.email}`}
+                  iconType="mail"
+                  label={contact.email}
                />
             </li>
          )}

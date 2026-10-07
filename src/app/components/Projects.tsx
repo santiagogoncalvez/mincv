@@ -69,7 +69,7 @@ function ProjectTags({ tags }: ProjectTagsProps) {
          {tags.map((tag) => (
             <li key={tag}>
                <Badge
-                  className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+                  className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[10px] print:leading-tight"
                   variant="secondary"
                >
                   {tag}
@@ -128,6 +128,8 @@ interface ProjectsProps {
  * Section component displaying all side projects
  */
 export function Projects({ projects }: ProjectsProps) {
+   if(!projects.length) return null;
+
    return (
       <Section>
          <h2 className="text-xl font-semibold" id="side-projects">
