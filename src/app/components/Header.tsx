@@ -3,8 +3,7 @@ import { Avatar } from "@/components/avatar";
 import { Button } from "@/components/ui/button";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { XIcon } from "@/components/icons/x-icon";
-import { RESUME_DATA } from "@/data/resume-data";
-import type { IconType, LinkGeneralWithIcon } from "@/lib/types";
+import type { IconType, LinkGeneralWithIcon, ResumeData } from "@/lib/types";
 
 // const formatLink = (str: string) =>
 //    str
@@ -28,8 +27,8 @@ const ICON_MAP: Record<
 } as const;
 
 interface LocationLinkProps {
-   location: typeof RESUME_DATA.location;
-   locationLink: typeof RESUME_DATA.locationLink;
+   location: string;
+   locationLink: string;
 }
 
 function LocationLink({ location, locationLink }: LocationLinkProps) {
@@ -84,7 +83,7 @@ function SocialButton({ href, iconType, label }: SocialButtonProps) {
 }
 
 interface ContactButtonsProps {
-   contact: typeof RESUME_DATA.contact;
+   contact: ResumeData["contact"];
    personalWebsiteUrl?: LinkGeneralWithIcon | null;
 }
 
@@ -153,7 +152,7 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
 }
 
 interface PrintContactProps {
-   contact: typeof RESUME_DATA.contact;
+   contact: ResumeData["contact"];
    personalWebsiteUrl?: LinkGeneralWithIcon | null;
 }
 
@@ -224,42 +223,42 @@ print:flex print:text-[12px] flex-wrap list-none gap-x-4 gap-y-2  text-sm "
 /**
  * Header component displaying personal information and contact details
  */
-export function Header() {
+export function Header({ data }: { data: ResumeData }) {
    return (
       <header className="flex justify-between">
          <div className="flex-1 space-y-2">
             <div className="flex justify-between">
                <div className="flex-1 space-y-2">
                   <h1 className="text-2xl font-bold" id="resume-name">
-                     {RESUME_DATA.name}
+                     {data.name}
                   </h1>
                   <p className="max-w-lg text-pretty  text-sm text-foreground/80 print:text-[12px]">
-                     {RESUME_DATA.about}
+                     {data.about}
                   </p>
 
                   <LocationLink
-                     location={RESUME_DATA.location}
-                     locationLink={RESUME_DATA.locationLink}
+                     location={data.location}
+                     locationLink={data.locationLink}
                   />
                </div>
             </div>
 
             <ContactButtons
-               contact={RESUME_DATA.contact}
-               personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+               contact={data.contact}
+               personalWebsiteUrl={data.personalWebsiteUrl}
             />
 
             <PrintContact
-               contact={RESUME_DATA.contact}
-               personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
+               contact={data.contact}
+               personalWebsiteUrl={data.personalWebsiteUrl}
             />
          </div>
 
          <Avatar
             className="size-28 "
-            src={RESUME_DATA.avatarUrl}
-            alt={`${RESUME_DATA.name}'s profile picture`}
-            fallback={RESUME_DATA.initials}
+            src={data.avatarUrl}
+            alt={`${data.name}'s profile picture`}
+            fallback={data.initials}
          />
       </header>
    );
