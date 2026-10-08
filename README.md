@@ -1,4 +1,4 @@
-# Minimalist CV
+# Mincv
 
 Fork de Minimalist CV de Bartosz Jarocki, adaptado y personalizado para utilizarlo como mi currículum profesional.
 
