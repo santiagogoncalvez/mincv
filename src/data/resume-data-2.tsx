@@ -127,7 +127,8 @@ export const RESUME_DATA: ResumeData = {
       "description": "Tienda online para una marca de productos textiles hechos a mano.",
       "highlights": [
         "Catálogo de productos, páginas de detalle y carrito compartible, con autogestión de contenidos en Sanity CMS.",
-        "Arquitectura con Astro, React y TypeScript, con optimización de Core Web Vitals."
+        "Arquitectura con Astro, React y TypeScript, con optimización de Core Web Vitals.",
+        "Diseño e implementación de una experiencia de compra intuitiva y optimizada para todos los dispositivos."
       ]
     },
     {
