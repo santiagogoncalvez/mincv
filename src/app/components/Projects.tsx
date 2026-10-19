@@ -1,3 +1,4 @@
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import React from "react";
 import { Badge } from "../../components/ui/badge";
 import {
@@ -31,13 +32,17 @@ function ProjectTitle({ title, link }: ProjectLinkProps) {
             // href={link}
             // target="_blank"
             // rel="noopener noreferrer"
-            className="inline items-center gap-1 "
+            className="inline-flex items-center gap-1"
             // aria-label={`${title} project (opens in new tab)`}
          >
-            {title}{" "}
+            {title}
             <span
-               className="ml-1 inline-block size-1.5 translate-y-[-2px] rounded-full bg-green-500"
+               className="inline-block size-1.5 rounded-full bg-green-500"
                title="Active project indicator"
+               aria-hidden="true"
+            />
+            <ExternalLinkIcon
+               className="size-3.5"
                aria-hidden="true"
             />
          </span>
