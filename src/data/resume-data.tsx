@@ -42,8 +42,8 @@ export const RESUME_DATA: ResumeData = {
   "courses": [
     {
       "name": "Curso de PostgreSQL de PostgreSQL",
-      "start": "2026",
-      "end": "2026"
+      "start": "oct. 2026",
+      "end": "oct. 2026"
     },
     {
       "name": "Next.js App Router Fundamentals de Vercel",
@@ -78,7 +78,6 @@ export const RESUME_DATA: ResumeData = {
       "badges": [
         "QA/UX",
         "Trello",
-        "Godot",
         "Analítica de producto"
       ],
       "title": "Product Quality & UX",

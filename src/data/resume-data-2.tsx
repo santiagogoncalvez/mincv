@@ -41,9 +41,9 @@ export const RESUME_DATA: ResumeData = {
   ],
   "courses": [
     {
-      "name": "Curso de PostgreSQL de Midudev",
-      "start": "2026",
-      "end": "2026"
+      "name": "Curso de PostgreSQL de PostgreSQL",
+      "start": "oct. 2026",
+      "end": "oct. 2026"
     },
     {
       "name": "Next.js App Router Fundamentals de Vercel",
@@ -69,7 +69,7 @@ export const RESUME_DATA: ResumeData = {
     {
       "company": "Balatruco",
       "link": "https://balatruco.com",
-      "badges": ["QA/UX", "Trello", "Godot", "Analítica de producto"],
+      "badges": ["QA/UX", "Trello", "Analítica de producto"],
       "title": "Product Quality & UX",
       "start": "oct. 2026",
       "end": "actualidad",
