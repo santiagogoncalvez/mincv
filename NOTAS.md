@@ -12,6 +12,10 @@
 5. **GraphQL types en `types.ts`** — `GraphQLMe`, `resumeDataToGraphQL`, `reactToString`... solo `reactToString` es útil (servirá para exportar JSON con `summary` como string). El resto depende del punto 1.
 6. **`apollo`/`class-validator`/`type-graphql`** en `package.json` también entraron por lo mismo.
 
+## Convenciones de iconos (verificado en el código)
+- **Icono = color sólido 100%** (`text-foreground` o heredado del texto), **texto de al lado = `text-foreground/80`**. Ejemplos: Header (tel/mail/LinkedIn/GitHub), LocationLink (MapPin hereda), CompanyLink (ExternalLink hereda).
+- Iconos genéricos → lucide-react. Iconos de marca → SVGs custom en `src/components/icons/`.
+
 ## Cosas confirmadas (no pendientes, contexto)
 
 - `avatarUrl` sale de GitHub (`https://github.com/santiagogoncalvez.png`) → cambiarlo a subida de imagen = solo reemplazar ese string con data URL.

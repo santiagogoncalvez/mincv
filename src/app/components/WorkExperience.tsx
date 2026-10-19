@@ -1,3 +1,4 @@
+import { ExternalLink as ExternalLinkIcon } from "lucide-react";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -69,13 +70,17 @@ interface CompanyLinkProps {
 function CompanyLink({ company, link }: CompanyLinkProps) {
    return (
       <a
-         className="hover:underline"
+         className="inline-flex items-center gap-x-1 hover:underline"
          href={link}
          target="_blank"
          rel="noopener noreferrer"
          aria-label={`${company} company website`}
       >
          {company}
+         <ExternalLinkIcon
+            className="size-3.5"
+            aria-hidden="true"
+         />
       </a>
    );
 }
