@@ -10,7 +10,7 @@ import { RESUME_DATA } from "@/data/resume-data";
 
 import localFont from "next/font/local";
 
-export const satoshi = localFont({
+const satoshi = localFont({
    src: "../fonts/Satoshi-Variable.woff2",
    variable: "--font-satoshi",
    weight: "300 900",
