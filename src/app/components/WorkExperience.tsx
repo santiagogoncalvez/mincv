@@ -78,7 +78,7 @@ function CompanyLink({ company, link }: CompanyLinkProps) {
       >
          {company}
          <ExternalLinkIcon
-            className="size-3.5"
+            className="size-3"
             aria-hidden="true"
          />
       </a>
@@ -102,9 +102,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
          <CardHeader className="print:space-y-1">
             <div className="flex items-start justify-between gap-x-2 text-base flex-wrap">
                <h3 className="inline-flex flex-1 min-w-0 flex-wrap items-center gap-x-1 gap-y-1.5 font-semibold leading-none print:text-sm">
-                  {link ? (
-                     <CompanyLink company={company} link={link} />
-                  ) : company}
+                  {title}
                   <BadgeList
                      className="hidden gap-x-1 gap-y-1.5 sm:inline-flex sm:flex-wrap"
                      badges={badges}
@@ -114,7 +112,11 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
             </div>
 
             <h4 className=" text-sm font-semibold leading-none print:text-[12px]">
-               {title}
+               {link ? (
+                  <CompanyLink company={company} link={link} />
+               ) : (
+                  company
+               )}
             </h4>
          </CardHeader>
 
