@@ -5,8 +5,8 @@ export const RESUME_DATA: ResumeData = {
   "initials": "SG",
   "location": "Buenos Aires, Argentina",
   "locationLink": "https://www.google.com/maps/place/Buenos+Aires,+Argentina",
-  "about": "Frontend Developer | React | TypeScript | Next.js | Astro | SEO",
-  "summary": "Frontend Developer con experiencia desarrollando productos para clientes utilizando React, TypeScript, Next.js y Astro. Me enfoco en construir interfaces rápidas, mantenibles y orientadas a la experiencia de usuario, con foco en rendimiento, accesibilidad y SEO técnico. También creo contenido sobre desarrollo web y automatizo parte de mi proceso con agentes de IA.",
+  "about": "Desarrollador Frontend especializado en React y Next.js",
+  "summary": "Construyo productos web desde la idea hasta que la gente los usa. Creo contenido sobre desarrollo y uso herramientas de IA para automatizar mi trabajo.",
   "avatarUrl": "https://github.com/santiagogoncalvez.png",
   "personalWebsiteUrl": {
     "name": "Portfolio",
@@ -20,28 +20,28 @@ export const RESUME_DATA: ResumeData = {
       {
         "name": "LinkedIn",
         "url": "https://www.linkedin.com/in/santiagogoncalvez",
-        "icon": "linkedin",
-        "label": "linkedin.com/in/santiagogoncalvez"
+        "label": "linkedin.com/in/santiagogoncalvez",
+        "icon": "linkedin"
       },
       {
         "name": "GitHub",
         "url": "https://github.com/santiagogoncalvez",
-        "icon": "github",
-        "label": "github.com/santiagogoncalvez"
+        "label": "github.com/santiagogoncalvez",
+        "icon": "github"
       }
     ]
   },
   "education": [
     {
       "school": "Universidad Nacional de La Matanza",
-      "degree": "Grado en Ingeniería, Computer Science. Cursé el primer año de una carrera orientada al desarrollo de software y la resolución de problemas complejos, con bases de programación estructurada, lógica algorítmica y pensamiento computacional.",
+      "degree": "Ingeniería en Informática. Primer año cursado. Aprendí programación, lógica y resolución de problemas.",
       "start": "jul. 2023",
       "end": "jul. 2025"
     }
   ],
   "courses": [
     {
-      "name": "Curso de PostgreSQL de PostgreSQL",
+      "name": "Curso de PostgreSQL en postgresql.org",
       "start": "oct. 2026",
       "end": "oct. 2026"
     },
@@ -62,87 +62,91 @@ export const RESUME_DATA: ResumeData = {
     }
   ],
   "languages": [
-    { "name": "Español", "level": "Nativo" },
-    { "name": "Inglés", "level": "B1" }
+    {
+      "name": "Español",
+      "level": "Nativo"
+    },
+    {
+      "name": "Inglés",
+      "level": "B1"
+    }
   ],
   "work": [
     {
       "company": "Balatruco",
       "link": "https://balatruco.com",
-      "badges": ["QA/UX", "Trello", "Analítica de producto"],
+      "badges": [
+        "QA / Calidad",
+        "Trello",
+        "Análisis de producto"
+      ],
       "title": "Product Quality & UX",
       "start": "oct. 2026",
       "end": "actualidad",
-      "description": "Formo parte del equipo de un roguelike de truco argentino con la progresión de Balatro. Mi rol es probar el juego, detectar errores y analizar la experiencia de usuario para detectar fricciones y proponer mejoras de interfaz.",
+      "description": "Formo parte del equipo de un juego de truco argentino con el estilo visual de Balatro. Me encargo de probarlo, encontrar errores y mejorar la experiencia de juego.",
       "highlights": [
-        "Detección y documentación de errores con capturas, videos y pasos de reproducción.",
-        "Análisis de UX identificando puntos de fricción y reportes de calidad priorizados por impacto en Trello.",
-        "Propuesta de mejoras de interfaz y reportes visuales para guiar decisiones del equipo."
+        "Creé reportes de errores claros que el equipo aplica en producción.",
+        "Detecté dónde se traba el jugador y propuse cambios que el equipo tuvo en cuenta.",
+        "Me uní al equipo por un comentario que hice en LinkedIn. Hoy hay más de 500 personas en Discord, más de 10000 partidas jugadas y más de 100 personas probando el juego."
       ]
     },
     {
-      "company": "Estudio y construcción",
+      "company": "Estudio y construcción autodidacta",
       "link": "",
-      "badges": ["Node.js", "Express", "PostgreSQL", "TypeScript", "REST API"],
-      "title": "Full Stack Developer",
+      "badges": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "TypeScript",
+        "REST API"
+      ],
+      "title": "Frontend Developer",
       "start": "jun. 2026",
       "end": "actualidad",
-      "description": "Estudio y construyo proyectos full stack de forma autodidacta, entendiendo cada decisión que tomo a lo largo del proceso. Sigo profundizando en backend con Node.js, Express y PostgreSQL.",
+      "description": "Estudio y construyo proyectos frontend de forma autodidacta. Profundizo en la parte visual, el rendimiento y la experiencia de usuario.",
       "highlights": [
-        "Autenticación con tokens, gestión de sesiones y protección de rutas aplicadas en RESU.",
-        "API REST en Express con todas las bases, conectada a un frontend funcional.",
-        "Curso de PostgreSQL de Midudev completado; actualmente por terminar el curso fullstack."
+        "Implementé el ingreso de usuarios, su sesión y sus permisos en resu.",
+        "Construí el servidor y lo conecté con la parte visual que usa el usuario.",
+        "Completé el curso de bases de datos y sigo con el de frontend."
       ]
     },
     {
       "company": "Profesional independiente",
       "link": "",
-      "badges": ["OpenCode", "Agentes de IA", "Automatización", "YouTube", "LinkedIn"],
+      "badges": [
+        "IA",
+        "Automatización",
+        "YouTube",
+        "LinkedIn"
+      ],
       "title": "Content Creator & Automation",
       "start": "ene. 2026",
       "end": "actualidad",
-      "description": "Creo contenido sobre desarrollo web y programación, y automatizo parte de mi propio proceso con agentes de IA.",
+      "description": "Creo contenido sobre programación y desarrollo web. Armé mi propio sistema con herramientas de IA para editar y publicar más rápido.",
       "highlights": [
-        "Automaticé con agentes la detección de segmentos ganadores, el subtitulado y la exportación de miniatura, título y descripción.",
-        "Generé 129.327 impresiones en LinkedIn en el último año, con una publicación que alcanzó 86.145.",
-        "Comunidad de 5.000+ seguidores y contactos reales desde el contenido: Balatruco entró por un comentario mío en LinkedIn."
+        "Automaticé el flujo de edición y publicación con IA.",
+        "Generé 129000 impresiones en LinkedIn el último año. Un post alcanzó 86000 personas.",
+        "Construí una comunidad de más de 5000 seguidores y contactos reales. Me uní al equipo de Balatruco por un comentario que hice en LinkedIn."
       ]
     },
     {
       "company": "Freelance",
-      "link": "",
-      "badges": ["React", "TypeScript", "Astro", "Sanity CMS", "Tailwind CSS"],
+      "link": "https://www.santiagogoncalvez.com",
+      "badges": [
+        "React",
+        "TypeScript",
+        "Astro",
+        "Sanity CMS",
+        "Tailwind CSS"
+      ],
       "title": "Frontend Developer",
       "start": "feb. 2026",
-      "end": "jun. 2026",
-      "description": "Desarrollo de sitios y experiencias web para marcas personales y emprendimientos. Del diseño a la puesta en producción, con foco en velocidad, accesibilidad y SEO.\n\nCerré esta etapa para especializarme en el desarrollo Full Stack y seguir profundizando en backend."
-    },
-    {
-      "company": "Nidotrama",
-      "link": "https://nidotrama.com",
-      "badges": ["Astro", "React", "TypeScript", "Sanity CMS"],
-      "title": "Frontend Developer (Freelance)",
-      "start": "abr. 2026",
       "end": "may. 2026",
-      "description": "Tienda online para una marca de productos textiles hechos a mano.",
+      "description": "Desarrollé sitios web completos para marcas personales y emprendimientos.",
       "highlights": [
-        "Catálogo de productos, páginas de detalle y carrito compartible, con autogestión de contenidos en Sanity CMS.",
-        "Arquitectura con Astro, React y TypeScript, con optimización de Core Web Vitals.",
-        "Diseño e implementación de una experiencia de compra intuitiva y optimizada para todos los dispositivos."
-      ]
-    },
-    {
-      "company": "Freelance",
-      "link": "",
-      "badges": ["Astro", "JavaScript", "Tailwind CSS", "SEO Técnico", "Lighthouse"],
-      "title": "Frontend Developer",
-      "start": "feb. 2026",
-      "end": "mar. 2026",
-      "description": "Desarrollo de landing pages para marcas personales con foco en rendimiento y SEO técnico.",
-      "highlights": [
-        "3 clientes: Jorgelina Reales, Any Giraldez e Isabel López.",
-        "100/100 en Google Lighthouse en Performance, Accessibility, Best Practices y SEO.",
-        "Arquitectura en Astro, optimización de Core Web Vitals y SEO técnico."
+        "Entregué 4 proyectos funcionando en producción.",
+        "Logré aumentar un 50% los clientes de Isabel López.",
+        "Permití que los clientes autogestionen su contenido."
       ]
     }
   ],
@@ -151,43 +155,78 @@ export const RESUME_DATA: ResumeData = {
     "TypeScript",
     "Next.js",
     "Astro",
-    "JavaScript ES6+",
+    "JavaScript",
     "HTML5",
     "CSS3",
     "Tailwind CSS",
     "Responsive Design",
     "REST APIs",
-    "TanStack Query",
-    "State Management",
-    "Sanity CMS",
+    "Node.js",
+    "PostgreSQL",
     "Strapi CMS",
-    "SEO",
-    "UX/UI",
-    "Lighthouse",
-    "Rendimiento Web",
+    "Sanity CMS",
+    "JWT",
+    "Docker",
+    "Redis",
     "Git",
     "GitHub",
+    "SEO",
+    "UX/UI",
+    "QA / Control de calidad",
+    "Automatización de procesos",
+    "IA",
+    "Rendimiento Web",
     "Resolución de problemas",
     "Comunicación"
   ],
   "projects": [
     {
       "title": "resu",
-      "techStack": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Strapi v5", "PostgreSQL", "Gemini", "Vercel"],
-      "description": "Plataforma propia, desplegada en producción, para generar, editar, guardar y organizar resúmenes de videos de YouTube con IA.",
-      "link": { "label": "Web", "href": "https://resu.santiagogoncalvez.com" }
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Strapi v5",
+        "PostgreSQL",
+        "Gemini"
+      ],
+      "description": "Plataforma para resumir videos de YouTube con IA.",
+      "link": {
+        "label": "Web",
+        "href": "https://resu.santiagogoncalvez.com"
+      }
     },
     {
       "title": "Admin Dashboard",
-      "techStack": ["Next.js", "React", "TypeScript", "PostgreSQL", "NextAuth", "Tailwind CSS"],
-      "description": "Plataforma administrativa con Next.js App Router: autenticación con roles, métricas, búsqueda, paginación y persistencia en PostgreSQL.",
-      "link": { "label": "GitHub", "href": "https://admindashboard.santiagogoncalvez.com" }
+      "techStack": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "NextAuth",
+        "Tailwind CSS"
+      ],
+      "description": "Panel administrativo con métricas, búsqueda y base de datos.",
+      "link": {
+        "label": "GitHub",
+        "href": "https://admindashboard.santiagogoncalvez.com"
+      }
     },
     {
       "title": "Hacker Stories",
-      "techStack": ["React", "TypeScript", "React Router", "Vitest", "REST APIs", "CSS"],
-      "description": "Cliente de Hacker News con React y TypeScript, enfocado en experiencia de usuario, rendimiento y consumo de APIs REST.",
-      "link": { "label": "Demo", "href": "https://hackerstories.santiagogoncalvez.com" }
+      "techStack": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "Vitest",
+        "REST APIs",
+        "CSS"
+      ],
+      "description": "Sitio de noticias tecnológicas para leer, ver comentarios y buscar.",
+      "link": {
+        "label": "Demo",
+        "href": "https://hackerstories.santiagogoncalvez.com"
+      }
     }
   ]
 } as const;
